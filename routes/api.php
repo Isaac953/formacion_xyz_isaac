@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('formacions', 'FormacionsController@list');
+Route::get('formacions/{id}', 'FormacionsController@get');
+Route::post('formacions', 'FormacionsController@create');
+Route::put('formacions/{id}', 'FormacionsController@update');
+Route::delete('formacions/{id}', 'FormacionsController@delete');
